@@ -24,6 +24,8 @@ class TasksFragment : Fragment() {
         val dao =  TaskDatabase.getInstance(application).taskDao
         val viewModelFactory = TaskViewModelFactory(dao)
         val viewModel = ViewModelProvider(this, viewModelFactory).get(TaskViewModel::class.java)
+
+        binding.viewModel = viewModel
         return view
     }
 
